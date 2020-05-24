@@ -12,7 +12,8 @@ module.exports = {
 
       .field({
         _id: true,
-        name: true
+        name: true,
+        order: true
       })
       .orderBy('order', 'asc')
         .skip(skip) // 跳过结果集中的前 10 条，从第 11 条开始返回

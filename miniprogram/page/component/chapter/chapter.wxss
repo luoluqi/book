@@ -10,3 +10,5 @@ page{background: #fff;}
 .btn{display: inline-block;}
 .fl-right{float: right;}
 .bottom-space{height:400rpx;}
+.top-space{height: 100rpx;}
+.top-p{position: fixed;left: 0;top: 0;width: 100%;}

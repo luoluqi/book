@@ -1,7 +1,10 @@
 <import src="../../../util/wxParse.wxml"/>
 <view  class='main'>
-  <view class='switch-btn {{active == 0 ? "on" : ""}}' data-index="0" bindtap='change'>原文</view>
-  <view class='switch-btn {{active == 1 ? "on" : ""}}' data-index="1"  bindtap='change'>译文</view>
+  <view class="top-p">
+    <view class='switch-btn {{active == 0 ? "on" : ""}}' data-index="0" bindtap='change'>原文</view>
+    <view class='switch-btn {{active == 1 ? "on" : ""}}' data-index="1"  bindtap='change'>译文</view>
+  </view>
+  <view class="top-space"></view>
   <view bindtap='dianji' wx:if="{{active == 0}}" class='content'>
      <template is="wxParse" data="{{wxParseData:original.nodes}}"/>
    

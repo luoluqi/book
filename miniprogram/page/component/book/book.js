@@ -137,11 +137,13 @@ Page({
       if(temp._id == _id){
         cur.chapterName = temp.name;
         cur.chapterId = temp._id;
+        var order = temp.order
+        cur.pageNum = Math.ceil(order / this.data.pageSize)
       }
     }
     cur.bookName = this.data.book.name;
     cur.bookId = this.data.book._id;
-    cur.pageNum = this.data.pageNum;
+    
 
     app.history.add(cur);
     wx.navigateTo({

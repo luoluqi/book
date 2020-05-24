@@ -11,7 +11,9 @@ Page({
     active:0,
     scrollTop:0,
     windowHeight:0,
-    windowWidth: 0
+    windowWidth: 0,
+    originalTop:0,
+    translationTop:0
   },
 
   /**
@@ -54,10 +56,24 @@ Page({
     this.setData({
       active:index
     });
+    
+    if(index == 0){
+      this.data.translationTop = this.data.scrollTop;
+      this.data.scrollTop = this.data.originalTop
+    
+    }else if(index == 1){
+      this.data.originalTop = this.data.scrollTop;
+      this.data.scrollTop = this.data.translationTop 
+    }
+
+    wx.pageScrollTo({
+      scrollTop: this.data.scrollTop,
+      duration: 100
+    })
   },
 
   prev:function(){
-    var top = this.data.scrollTop - this.data.windowHeight + 60;
+    var top = this.data.scrollTop - this.data.windowHeight + 60 + 100;
     if(top < 0){
       top = 0;
     }
@@ -66,17 +82,17 @@ Page({
     });
     wx.pageScrollTo({
       scrollTop: this.data.scrollTop,
-      duration: 1000
+      duration: 500
     })
   },
 
   next:function(){
     this.setData({
-      scrollTop: this.data.scrollTop + this.data.windowHeight - 60
+      scrollTop: this.data.scrollTop + this.data.windowHeight - 60 - 100
     });
     wx.pageScrollTo({
       scrollTop: this.data.scrollTop,
-      duration: 1000,
+      duration: 500,
       success:function(val){
           console.log(val,"success");
       },
