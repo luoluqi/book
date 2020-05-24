@@ -1,0 +1,7 @@
+<view class="form-box">
+        <form bindsubmit="formSubmit">
+            <textarea value="{{desc}}" bindinput='change'  placeholder="留下您的建议" ></textarea>
+           
+            <button type='primary' bindtap='submit'>提交</button>
+        </form>
+    </view>

@@ -1,0 +1,24 @@
+<view class="main">
+    <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item._id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{categoryId === item._id?'on':''}}">{{item.name}}
+        </view>
+    </view>
+
+    
+    <view class="categroy-right">
+       <view wx:for="{{bookList}}" wx:key="index" data-id="{{item._id}}" class='book-item' bindtap='toBook'>
+        <view class='book-title'>{{item.name}}</view>
+        <view class='book-desc'>{{item.desc}}</view>
+      </view>
+   
+      <view wx:if="{{isMore}}" class='moring'>正在加载中...</view>
+      <view wx:else class='moring'>没有更多了</view>
+        <view class="bottom-space"></view>
+       
+    </view>
+   
+
+</view>
+

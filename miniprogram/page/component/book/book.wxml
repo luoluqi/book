@@ -1,0 +1,16 @@
+<view>
+  <view   class='book-item'>
+    <view class='book-title'>{{book.name}}</view>
+    <view class='book-desc'>{{book.desc}}</view>
+  </view>
+
+
+
+  <view wx:for="{{chapterList}}" wx:key="index" data-id="{{item._id}}" class='book-item' bindtap='toChapter'>
+    <view class='book-title'>{{item.name}}</view>
+    <view class='book-desc'>{{item.desc}}</view>
+  </view>
+  <view  class='moring'>{{loadingText}}</view>
+
+  <view style="height: 400rpx;"></view>
+</view>

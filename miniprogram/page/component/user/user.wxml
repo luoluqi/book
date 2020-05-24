@@ -1,0 +1,26 @@
+<view class="main">
+    
+    <view class="header">
+        <view class="avatar-p">
+         <open-data class="avatar" type="userAvatarUrl"></open-data>
+         </view>
+         <open-data class="nick-name" type="userNickName"></open-data>
+        
+         <button open-type="contact" class="about">联系客服</button>
+         
+         <image wx:if="{{isShang}}" mode='widthFix' bindtap='showPay' class='shang' src='/image/shangzi.jpg'></image>
+    </view>
+
+    <canvas canvas-id='myCanvas' style="width: 375px; height: 513px;position:absolute;left:1000rpx;"></canvas>
+ 
+
+    <view wx:if="{{historyList.length > 0}}" class='his-list'>
+      <view class='his-title'>历史阅读</view>
+      <view wx:for="{{historyList}}" wx:key="{{index}}" data-index="{{index}}" bindtap='toBook' class='his-item'>
+        <view class='his-name' >{{item.bookName}}</view>
+        <view class='his-name' >{{item.chapterName}}</view>
+      </view>
+    </view>
+    
+   
+</view>

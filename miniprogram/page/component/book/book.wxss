@@ -1,0 +1,5 @@
+@import '../../common/common.wxss';
+.book-list{background: #fff;border-bottom:#d9d9d9 2rpx solid;border-top:#d9d9d9 2rpx solid;margin:20rpx 0 0 0;}
+.book-item{padding:35rpx 30rpx;border-bottom: 2rpx solid #e5e5e5;}
+.book-title{padding:0 0 30rpx 0;}
+.book-desc{font-size:0.8em;color:#999999; }

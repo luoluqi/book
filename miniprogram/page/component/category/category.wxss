@@ -1,0 +1,80 @@
+@import '../../common/common.wxss';
+
+page,.main{
+   
+}
+.categroy-left{
+   position: fixed;
+   top:0;
+   left:0;
+    width: 150rpx;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow-y:scroll; 
+}
+.categroy-left .cate-list{
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    border-left: 3px solid #fff;
+    overflow: hidden;
+}
+.categroy-left .cate-list.on{
+    color: #2882e9;
+    border-color: #2882e9;
+}
+.categroy-right{
+   margin: 0 0 0 150rpx;
+    width: 600rpx;
+  
+}
+.cate-box{
+    height: 100%;
+    padding:40rpx;
+    box-sizing: border-box;
+}
+.cate-box .cate-banner image{
+    display: block;
+    width: 100%;
+    height: 190rpx;
+}
+.cate-title{
+    position: relative;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding:30rpx 0 55rpx;
+    text-align: center;
+    color: #AB956D;
+    font-size: 28rpx;
+}
+.cate-title::before{
+    position: absolute;
+    left: 130rpx;
+    top: 43rpx;
+    content: '';
+    width: 70rpx;
+    height: 4rpx;
+    background: #AB956D;
+}
+.cate-title::after{
+    position: absolute;
+    right: 130rpx;
+    top: 43rpx;
+    content: '';
+    width: 70rpx;
+    height: 4rpx;
+    background: #AB956D;
+}
+
+.book-item{padding:35rpx 30rpx;border-bottom: 2rpx solid #e5e5e5;}
+.book-title{padding:0 0 30rpx 0;}
+.book-desc{font-size:0.8em;color:#999999; text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  align-content: center;}
+  .bottom-space{height:400rpx;}
+

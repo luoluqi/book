@@ -1,0 +1,12 @@
+@import '../../../util/wxParse.wxss';
+.switch-btn{padding:30rpx 0;display: inline-block;text-align: center;
+background:#fff;
+border-bottom:#e5e5e5 6rpx solid;width:50%;
+}
+.switch-btn.on{border-bottom:#2882e9 6rpx solid;width:50%;color:#2882e9}
+page{background: #fff;}
+.content view{padding:20rpx;line-height: 60rpx;}
+.bottom{position: fixed;bottom: 0;width: 100%;}
+.btn{display: inline-block;}
+.fl-right{float: right;}
+.bottom-space{height:400rpx;}

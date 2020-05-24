@@ -1,0 +1,17 @@
+page{background: #fff;}
+.form-box{
+    padding-left: 30rpx;
+}
+.form-box textarea{
+    display: inline-block;padding: 20rpx;margin: 20rpx;
+    height: 400rpx;
+    border: 1rpx solid #ededed;
+    font-size: 28rpx;
+    color: #999;
+}
+.form-box .input-placeholder{
+    color: #aaa;
+}
+.form-box button{
+    margin:30rpx 30rpx 0 0;
+}

@@ -1,0 +1,19 @@
+<import src="../../../util/wxParse.wxml"/>
+<view  class='main'>
+  <view class='switch-btn {{active == 0 ? "on" : ""}}' data-index="0" bindtap='change'>原文</view>
+  <view class='switch-btn {{active == 1 ? "on" : ""}}' data-index="1"  bindtap='change'>译文</view>
+  <view bindtap='dianji' wx:if="{{active == 0}}" class='content'>
+     <template is="wxParse" data="{{wxParseData:original.nodes}}"/>
+   
+  </view>
+   <view bindtap='dianji' wx:if="{{active == 1}}" class='content'>
+    
+    <template is="wxParse" data="{{wxParseData:translation.nodes}}"/>
+  </view>
+
+  <view class='bottom'>
+    <button bindtap='prev' type='primary' size='mini' class='btn'>点击左半边上一页</button>
+     <button bindtap="next" type='primary' size='mini' class='btn fl-right'>点击右半边下一页</button>
+  </view>
+  <view class='bottom-space'></view>
+</view>
