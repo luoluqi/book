@@ -110,15 +110,16 @@ Page({
 
     var self = this;
     chapterApi.getChapter(param).then(res => {
+      
       var list = res;
-        if (list.length == 0) {
+        if (list.length < this.data.pageSize) {
           self.setData({
             isLoading: true,
-            loadingText: "没有更多了",
-            pageNum:self.data.pageNum - 1
+            loadingText: "没有更多了"
+          
           });
           self.data.isMore = false;
-          return;
+       
         }
 
 
