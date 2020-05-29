@@ -137,7 +137,7 @@ Page({
       if(temp._id == _id){
         cur.chapterName = temp.name;
         cur.chapterId = temp._id;
-        var order = temp.order
+        var order = temp.order + 1
         cur.pageNum = Math.ceil(order / this.data.pageSize)
       }
     }
