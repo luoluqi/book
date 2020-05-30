@@ -15,7 +15,7 @@
  
 
     <view wx:if="{{historyList.length > 0}}" class='his-list'>
-      <view class='his-title'>历史阅读</view>
+      <view class='his-title'>历史记录</view>
       <view wx:for="{{historyList}}" wx:key="{{index}}" data-index="{{index}}" bindtap='toBook' class='his-item'>
         <view class='his-name' >{{item.bookName}}</view>
         <view class='his-name' >{{item.chapterName}}</view>
