@@ -76,5 +76,5 @@ page,.main{
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   align-content: center;}
-  .bottom-space{height:400rpx;}
+  .bottom-space{height:10rpx;}
 

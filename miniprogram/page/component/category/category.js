@@ -10,7 +10,7 @@ Page({
         bookList:[],
         categoryId:0,
         pageNum:1,
-     
+        pageSize: 10,
         isMore:true,
         isLoading:false,
         loadingText:"正在加载..."
@@ -73,11 +73,11 @@ Page({
 
       var self = this;
       bookApi.getBook({
-        pageNum: pageNum,pageSize:5, categoryId: categoryId
+        pageNum: pageNum,pageSize: this.data.pageSize, categoryId: categoryId
       }).then(res => {
             
           var list = res
-          if (list.length < 5) {
+          if (list.length < this.data.pageSize) {
             self.setData({
               isMore:false,
               isLoading: true,
