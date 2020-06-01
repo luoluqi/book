@@ -12,5 +12,5 @@
   </view>
   <view  class='moring'>{{loadingText}}</view>
 
-  <view style="height: 400rpx;"></view>
+  <view style="height: 10rpx;"></view>
 </view>
