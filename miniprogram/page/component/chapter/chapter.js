@@ -13,7 +13,8 @@ Page({
     windowHeight:0,
     windowWidth: 0,
     originalTop:0,
-    translationTop:0
+    translationTop:0,
+    offset: 50
   },
 
   /**
@@ -73,7 +74,7 @@ Page({
   },
 
   prev:function(){
-    var top = this.data.scrollTop - this.data.windowHeight + 60 + 100;
+    var top = this.data.scrollTop - this.data.windowHeight + 60 + this.data.offset;
     if(top < 0){
       top = 0;
     }
@@ -88,7 +89,7 @@ Page({
 
   next:function(){
     this.setData({
-      scrollTop: this.data.scrollTop + this.data.windowHeight - 60 - 100
+      scrollTop: this.data.scrollTop + this.data.windowHeight - 60 - this.data.offset
     });
     wx.pageScrollTo({
       scrollTop: this.data.scrollTop,
