@@ -32,9 +32,9 @@ Page({
         title: chapter.name
       })
 
-      wxparse.wxParse('original', 'html', chapter.original, self);
+      wxparse.wxParse('original', 'html', '<div>' + chapter.original + '</div>', self);
       if (chapter.translation){
-        wxparse.wxParse('translation', 'html', chapter.translation, self);
+        wxparse.wxParse('translation', 'html', '<div>' + chapter.translation + '</div>', self);
       }
      
     })
